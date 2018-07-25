@@ -1,3 +1,6 @@
+if [ ! -d "./share" ]; then
+	mkdir share
+fi
 docker run -t -i \
 -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) \
 -v share:/home/reidar/share \
